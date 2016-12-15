@@ -63,7 +63,9 @@ int main(int argc, char *argv[])
 	strcpy(req.name, "tpen-dmaw");
 	req.count = 2;
 	req.array[0] = NXS_FUNCTION_TPGEN;
-	req.array[1] = NXS_FUNCTION_DMAW;
+	req.array[1] = NXS_FUNCTION_ANY;
+	req.array[2] = NXS_FUNCTION_DMAW;
+	req.array[3] = NXS_FUNCTION_ANY;
 
 	ret = nxs_res_manager_request(fd, &req);
 	if (ret) {
